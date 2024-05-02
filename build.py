@@ -13,7 +13,7 @@ title = ""
 style = ""
 
 i = 0;
-while (content[i][0] == "$"):
+while (len(content[i]) > 0 and content[i][0] == "$"):
   variable = content[i].split(" ")[0];
   value = " ".join(content[i].split(" ")[1:]).strip('\n');
 
@@ -22,7 +22,7 @@ while (content[i][0] == "$"):
 
   i += 1
 
-websiteContent = markdown.markdown("\n".join(content[i:]))
+websiteContent = markdown.markdown("\n".join(content[i:]), extensions=['codehilite'])
 
 websiteF.write(f'''<!DOCTYPE html>
 <html lang="en">
@@ -33,14 +33,15 @@ websiteF.write(f'''<!DOCTYPE html>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
-  <link rel="stylesheet" href="templates/{style}">
+  <link rel="stylesheet" href="codeTheme.css">
+  <link rel="stylesheet" href="themes/{style}">
 </head>
 <body>
   <div class="p-4 text-center" id="naslov">
     <h1 id="title">{title}</h1>
   </div>
-  <div class="container-xl mt-5 px-sm-5">
-{websiteContent}
+  <div class="container-xl mt-5 px-sm-5 pb-5">
+    {websiteContent}
   </div>
 </body>
 </html>

@@ -1,11 +1,6 @@
-body {
-  background-color: rgb(34, 39, 46);
-  color: rgb(172, 186, 199);
-}
 #naslov {
+  background-color: rgb(33, 37, 41);
   color: white;
-  background-color: rgb(28, 33, 40);
-  border-bottom: 1px solid darkgray;
 }
 #title {
   padding: 0 !important;
@@ -53,4 +48,9 @@ color: blue;
 }
 img {
   border-radius: 20px;
+}
+.codehilite {
+  padding: 10px 10px 1px 10px;
+  border-radius: 10px;
+  margin-bottom: 1em;
 }

@@ -1,14 +1,31 @@
-$TITLE Test Page
-$STYLE basic-dark.css
+$TITLE Auto HTML
+$STYLE basic.css
+
 # Auto HTML
 ## Usage
-Nah, idk how to write it so just figure it out 😉. Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf 
+To use auto HTML fork this repo, change `content.amd` to whatever you want and commit+push the changes. First two lines of it should specify the title and the theme of the website then the content comes. Content should be written in markdown. 
 
-New Line (should be)
-## Another sub title
-### Sub sub title
-#### Sub sub sub title
-Hope this works...
-Another testing
-And another
-And another for new sylesheet
+### Example
+
+    #!markdown
+    $TITLE Hello World
+    $STYLE basic-dark.css
+
+    # Hello World
+
+    Some normal text...
+
+        #!python
+        # this is a code block
+        for i in range (len("Hello World")):
+          print("Hello World")
+
+    - this
+    - is
+    - a 
+    - list
+
+`$STYLE` should be name of a file from `themes` and `$TITLE` title of your page (it will be used to set the main title on the website and \<title\> in index.html)
+
+## How does it work?
+When `content.amd` is changed in a push action `actions.yml` will run `build.py`. `build.py` will using markdown module translate markdown from `content.amd` into HTML and write it to `index.html`. At the end changes will be pushed to repo. Pushing to `index.html` will trigger action `static.yml` which will deploy `index.html` to github pages.
