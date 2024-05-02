@@ -1,11 +1,11 @@
 $TITLE Auto HTML
-$STYLE basic.css
+$STYLE basic-dark.css
 
 # Auto HTML
 ## Usage
-To use auto HTML fork this repo, change `content.amd` to whatever you want and commit+push the changes. First two lines of it should specify the title and the theme of the website then the content comes. Content should be written in markdown. 
+To use auto HTML fork this repo, change `content.amd` to whatever you want and commit+push the changes. First two lines of `content.amd` should specify the title and the theme of the website then the content comes. Content should be written in markdown. 
 
-### Example
+### Example of `content.amd`
 
     #!markdown
     $TITLE Hello World
