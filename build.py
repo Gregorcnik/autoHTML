@@ -1,3 +1,5 @@
+import markdown
+
 websiteF = open("index.html", "wt")
 contentF = open("content.amd", "rt")
 
@@ -20,17 +22,7 @@ while (content[i][0] == "$"):
 
   i += 1
 
-for i in range(i, len(content)):
-  line = content[i].strip()
-
-  if (line == ""): pass
-  elif (line.split(" ")[0] == "#"): line = tagit(" ".join(line.split(" ")[1:]), "h1")
-  elif (line.split(" ")[0] == "##"): line = tagit(" ".join(line.split(" ")[1:]), "h2")
-  elif (line.split(" ")[0] == "###"): line = tagit(" ".join(line.split(" ")[1:]), "h3")
-  elif (line.split(" ")[0] == "####"): line = tagit(" ".join(line.split(" ")[1:]), "h4")
-  else: line = tagit(line, "p")
-
-  websiteContent += line+'\n'
+websiteContent = markdown.markdown("\n".join(content[i:]))
 
 websiteF.write(f'''<!DOCTYPE html>
 <html lang="en">
@@ -44,7 +36,7 @@ websiteF.write(f'''<!DOCTYPE html>
   <link rel="stylesheet" href="templates/{style}">
 </head>
 <body>
-  <div class="p-4 bg-dark text-white text-center" id="naslov">
+  <div class="p-4 text-center" id="naslov">
     <h1 id="title">{title}</h1>
   </div>
   <div class="container-xl mt-5 px-sm-5">

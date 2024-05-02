@@ -1,13 +1,14 @@
 $TITLE Test Page
-$STYLE basic.css
+$STYLE basic-dark.css
 # Auto HTML
-  ## Usage
-    Nah, idk how to write it so just figure it out 😉. Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf 
+## Usage
+Nah, idk how to write it so just figure it out 😉. Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf Alkadjsflkjsdla slkajflksjdf sdflkjsdlkfj sdflkjsdlkfjs sldkjflskdjf slkdfjslkdjf sldkfjlksdjf sdlkfjslkdjf sdlkfjslkdjf 
 
-    New Line (should be)
-  ## Another sub title
-    ### Sub sub title
-      #### Sub sub sub title
-        Hope this works...
-        Another testing
-        And another 
+New Line (should be)
+## Another sub title
+### Sub sub title
+#### Sub sub sub title
+Hope this works...
+Another testing
+And another
+And another for new sylesheet
