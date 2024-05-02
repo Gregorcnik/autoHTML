@@ -38,10 +38,18 @@ websiteF.write(f'''<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
   <link rel="stylesheet" href="templates/{style}">
 </head>
 <body>
+  <div class="p-4 bg-dark text-white text-center" id="naslov">
+    <h1>{title}</h1>
+  </div>
+  <div class="container-xl mt-5 px-sm-5">
 {websiteContent}
+  </div>
 </body>
 </html>
 ''')
