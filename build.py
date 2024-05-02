@@ -23,7 +23,7 @@ while (content[i][0] == "$"):
 for i in range(i, len(content)):
   line = content[i].strip()
 
-  if (line == ""): line = "<br>"
+  if (line == ""): pass
   elif (line.split(" ")[0] == "#"): line = tagit(" ".join(line.split(" ")[1:]), "h1")
   elif (line.split(" ")[0] == "##"): line = tagit(" ".join(line.split(" ")[1:]), "h2")
   elif (line.split(" ")[0] == "###"): line = tagit(" ".join(line.split(" ")[1:]), "h3")
@@ -32,19 +32,19 @@ for i in range(i, len(content)):
 
   websiteContent += line+'\n'
 
-websiteF.write(f"""<!DOCTYPE html>
+websiteF.write(f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
-  <link rel="stylesheet" href="{style}">
+  <link rel="stylesheet" href="templates/{style}">
 </head>
 <body>
 {websiteContent}
 </body>
 </html>
-""")
+''')
 
 websiteF.close()
 contentF.close()
