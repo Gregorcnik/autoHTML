@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(34, 39, 46);
+  color: rgb(172, 186, 199);
+}
+#naslov {
+  color: white;
+  background-color: rgb(28, 33, 40);
+  border-bottom: 1px solid darkgray;
+}
+#title {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+h1:not(#title), h2 {
+  border-bottom: 1px solid darkgrey;
+}
+h1, h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: .3em;
+
+}
+h3, h4 {
+  padding-top: 16px;
+  margin-bottom: 16px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1em;
+}
+a {
+color: lightblue;
+}
+a:hover {
+color: lightblue;
+}
+a:visited {
+color: blue;
+}
+img {
+  border-radius: 20px;
+}
