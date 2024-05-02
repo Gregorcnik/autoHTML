@@ -1,4 +1,4 @@
-h1::after, h2::after {
+h1:not(.title)::after, h2:not(.title)::after {
   content: "";
   display: block;
   width: 100%;

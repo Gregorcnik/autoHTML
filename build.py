@@ -45,7 +45,7 @@ websiteF.write(f'''<!DOCTYPE html>
 </head>
 <body>
   <div class="p-4 bg-dark text-white text-center" id="naslov">
-    <h1>{title}</h1>
+    <h1 id="title">{title}</h1>
   </div>
   <div class="container-xl mt-5 px-sm-5">
 {websiteContent}
