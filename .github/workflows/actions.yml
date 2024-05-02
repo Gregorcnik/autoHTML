@@ -1,4 +1,4 @@
-name: build website and deploy it
+name: Build the website
 
 on:
   # Runs on pushes targeting the default branch
