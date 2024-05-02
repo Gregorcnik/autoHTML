@@ -1,9 +1,10 @@
-h1, h2, h3, h4::after {
-  content: "<hr>";
-}
-hr {
+h1::after, h2::after {
+  content: "";
+  display: block;
   width: 100%;
-  color: darkgrey;
+  height: 1px;
+  background-color: darkgrey;
+  margin-top: 0.5em; /* Adjust this value to control spacing */
 }
 a {
   color: lightblue;
