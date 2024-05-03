@@ -57,7 +57,7 @@ with open(f"themes/{style}", "rt") as stylesheet:
     newFile.write(stylesheet.read())
 
 # add code highlightning stylesheet
-with open("codeThemes.css", "rt") as stylesheet:
+with open("codeTheme.css", "rt") as stylesheet:
   with open("./_site/codeTheme.css", "wt") as newFile:
     newFile.write(stylesheet.read())
 
