@@ -1,4 +1,8 @@
 import markdown
+import os
+
+# Create sites directory if it doesn't exist
+os.makedirs("./sites", exist_ok=True)
 
 websiteF = open("./sites/index.html", "wt")
 contentF = open("content.amd", "rt")
