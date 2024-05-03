@@ -1,5 +1,22 @@
 import markdown
 import os
+import shutil
+
+def copy(src, dst):
+    """
+    Copy a file or directory from source to destination.
+
+    Parameters:
+        src (str): Path to the source file or directory.
+        dst (str): Path to the destination directory.
+    """
+    if os.path.isfile(src):  # If source is a file
+        shutil.copy(src, dst)
+    elif os.path.isdir(src):  # If source is a directory
+        shutil.copytree(src, os.path.join(dst, os.path.basename(src)))
+    else:
+        print("Source is neither a file nor a directory.")
+      
 
 # Create sites directory if it doesn't exist
 os.makedirs("_site", exist_ok=True)
@@ -13,8 +30,9 @@ websiteContent = ""
 def tagit (text: str, tag: str) -> str:
   return f"<{tag}>{text}</{tag}>"
 
-title = ""
-style = ""
+# Set default values for document variables
+title = "Unnamed"
+style = "basic.css"
 
 i = 0;
 while (len(content[i]) > 0 and content[i][0] == "$"):
@@ -52,14 +70,10 @@ websiteF.write(f'''<!DOCTYPE html>
 ''')
 
 # Add selected stylesheet to _site/
-with open(f"themes/{style}", "rt") as stylesheet:
-  with open("./_site/style.css", "wt") as newFile:
-    newFile.write(stylesheet.read())
+copy(f"themes/{style}", "./_site/style.css")
 
-# add code highlightning stylesheet
-with open("codeTheme.css", "rt") as stylesheet:
-  with open("./_site/codeTheme.css", "wt") as newFile:
-    newFile.write(stylesheet.read())
+# Add code highlightning stylesheet
+copy("codeTheme.css", "./_site/codeTheme.css")
 
 websiteF.close()
 contentF.close()
