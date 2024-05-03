@@ -3,7 +3,7 @@ $STYLE basic-dark.css
 
 # Auto HTML
 ## Usage
-To use auto HTML fork this repo, change `content.amd` to whatever you want and commit+push the changes. First two lines of `content.amd` should specify the title and the theme of the website then the content comes. Content should be written in markdown. 
+To use auto HTML fork this repo, change `content.amd` to whatever you want and commit+push the changes. First two lines of `content.amd` should specify the title and the theme of the website, then the content comes. Content should be written in [markdown](https://daringfireball.net/projects/markdown/syntax "Markdown syntax"). 
 
 ### Example of `content.amd`
 
@@ -28,4 +28,4 @@ To use auto HTML fork this repo, change `content.amd` to whatever you want and c
 `$STYLE` should be name of a file from `themes` and `$TITLE` title of your page (it will be used to set the main title on the website and name of the tab)
 
 ## How does it work?
-When `content.amd` is changed in a push action `actions.yml` will run `build.py`. `build.py` will using markdown module translate markdown from `content.amd` into HTML and write it to `index.html`. At the end changes will be pushed to repo. Pushing to `index.html` will trigger action `static.yml` which will deploy `index.html` to github pages.
+When `content.amd` is changed in a push action, `actions.yml` will run `build.py`. `build.py` will, using markdown module, translate markdown from `content.amd` into HTML and write it to `index.html`. At the end changes will be pushed to repo. Pushing to `index.html` will trigger action `static.yml`, which will deploy `index.html` to github pages.
