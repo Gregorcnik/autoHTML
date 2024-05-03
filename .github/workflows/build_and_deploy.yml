@@ -22,55 +22,41 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
 
-      - name: checkout repo content
+      - name: Checkout repo content
         uses: actions/checkout@v4 # checkout the repository content
 
-      - name: setup python
+      - name: Setup python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9' # install the python version needed
 
-      - name: install python packages
+      - name: Install python packages
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: execute py script # run build.py
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with build.py # run build.py
+        # Outputs to './site' directory
         run: python build.py
 
-      - name: commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "built content.amd to index.html" --allow-empty)
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v3
 
-      - name: push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-
+  # Deployment job
   deploy:
-    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: build
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

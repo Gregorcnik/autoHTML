@@ -1,6 +1,6 @@
 import markdown
 
-websiteF = open("index.html", "wt")
+websiteF = open("./sites/index.html", "wt")
 contentF = open("content.amd", "rt")
 
 content = contentF.read().split('\n')
