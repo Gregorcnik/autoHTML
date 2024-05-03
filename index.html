@@ -17,7 +17,7 @@
   <div class="container-xl mt-5 px-sm-5 pb-5">
     <h1>Auto HTML</h1>
 <h2>Usage</h2>
-<p>To use auto HTML fork this repo, change <code>content.amd</code> to whatever you want and commit+push the changes. First two lines of <code>content.amd</code> should specify the title and the theme of the website then the content comes. Content should be written in markdown. </p>
+<p>To use auto HTML fork this repo, change <code>content.amd</code> to whatever you want and commit+push the changes. First two lines of <code>content.amd</code> should specify the title and the theme of the website, then the content comes. Content should be written in <a href="https://daringfireball.net/projects/markdown/syntax" title="Markdown syntax">markdown</a>. </p>
 <h3>Example of <code>content.amd</code></h3>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -54,7 +54,7 @@ Some normal text...
 
 <p><code>$STYLE</code> should be name of a file from <code>themes</code> and <code>$TITLE</code> title of your page (it will be used to set the main title on the website and name of the tab)</p>
 <h2>How does it work?</h2>
-<p>When <code>content.amd</code> is changed in a push action <code>actions.yml</code> will run <code>build.py</code>. <code>build.py</code> will using markdown module translate markdown from <code>content.amd</code> into HTML and write it to <code>index.html</code>. At the end changes will be pushed to repo. Pushing to <code>index.html</code> will trigger action <code>static.yml</code> which will deploy <code>index.html</code> to github pages.</p>
+<p>When <code>content.amd</code> is changed in a push action, <code>actions.yml</code> will run <code>build.py</code>. <code>build.py</code> will, using markdown module, translate markdown from <code>content.amd</code> into HTML and write it to <code>index.html</code>. At the end changes will be pushed to repo. Pushing to <code>index.html</code> will trigger action <code>static.yml</code>, which will deploy <code>index.html</code> to github pages.</p>
   </div>
 </body>
 </html>
